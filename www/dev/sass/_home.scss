@@ -7,37 +7,96 @@ body{
 		.page-home-top{
 			.page-home-top-highlight{
 				overflow:hidden;				
-				.page-home-social-title{
+				.page-home-news-title{
 					@include box-sizing(border-box);
 					position: absolute;
-					left: 50%;
-					width: 90%;
-					margin-left:-45%;
-					bottom:$grid-gutter-width;
-					line-height:80px;
+					left: 0;
+					bottom: 0;
+					margin: 0;
+					width: 100%;
 					vertical-align: middle;
-					background:$brand-black;
+					background: rgba($brand-black,.8);
 					color: $brand-orange;
-					padding: 0 $grid-gutter-width/2;
+					padding: 0 ($grid-gutter-width+$grid-gutter-width/2);
 					font-size: $font-size-large;
-					font-weight:bold;
 					opacity:1;
 					z-index:1;
 					@include transition(opacity .6s ease, transform .6s ease);
 					@include display-flex;
 					@include align-items(center);
-					i{
-						color:$brand-white;
-						margin-right:20px;
+					@include flex-direction(row);
+					@include justify-content(flex-start);
+					h2{
+						@include display-flex;
+						@include align-items(center);
+						flex:1;
+						font-size: $font-size-large;
+						font-weight:bold;
+						margin:0;
+						line-height:80px;
+						i{
+							color:$brand-white;
+							margin-right:20px;
+						}
 					}
+					.btn{
+					}
+				}
+				.page-home-news-title-top{
+					h2, h4{
+						margin:0;
+						line-height: 35px;
+					}
+					h2{
+						font-size:36px;
+					}
+					h4{
+						text-transform: uppercase;
+						font-weight:bold;
+					}
+					@include box-sizing(border-box);
+					position: absolute;
+					left: ($grid-gutter-width+$grid-gutter-width/2);
+					top: $grid-gutter-width;
+					margin: 0;
+					width: auto;
+					line-height:80px;
+					vertical-align: middle;
+					color: $brand-white;
+					font-size: 30px;
+					font-weight:bold;
+					opacity:1;
+					z-index:1;
+					@include transition(opacity .6s ease, transform .6s ease);
 				}
 			}
 			.page-home-top-dedicace{
-				width: 262px;
 				height: 476px;
-				img{
+				overflow:hidden;
+				.page-home-top-dedicace-image{
 					position: absolute;
+					width: 100%;
 					height: 100%;
+					background:url(../resources/dedicace.png) no-repeat right -79px;
+					background-size:cover;
+				}
+				.page-home-top-dedicace-button{
+					position: absolute;
+					bottom:0;
+					background:$brand-orange;
+					text-align: center;
+					width: 100%;
+					height: 80px;
+					padding:0 $grid-gutter-width;
+					@include display-flex;
+					@include align-items(center);
+					@include justify-content(center);
+					.btn-primary{
+						&:hover{
+							color:$brand-black !important;
+							border-color:$brand-black;
+						}
+					}
 				}
 			}
 		}
@@ -86,7 +145,7 @@ body{
 				bottom:$grid-gutter-width;
 				line-height:80px;
 				vertical-align: middle;
-				background:$brand-black;
+				background:rgba($brand-black,.8);
 				color: $brand-orange;
 				padding: 0 $grid-gutter-width/2;
 				font-size: $font-size-large;

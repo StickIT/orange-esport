@@ -1,7 +1,9 @@
 .page-container{	
 	margin-top: $grid-gutter-width;
 	.container-full{
+		position: relative;
 		width:100%;
+		height: 100%;
 		overflow:hidden;
 	}
 	.bottom-gutter{
