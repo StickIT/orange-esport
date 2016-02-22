@@ -1,3 +1,222 @@
 body{
 	background: $body-bg;
 }
+
+.page-container{
+	.page-home{
+		.page-home-top{
+			.page-home-top-highlight{
+				overflow:hidden;				
+				.page-home-social-title{
+					@include box-sizing(border-box);
+					position: absolute;
+					left: 50%;
+					width: 90%;
+					margin-left:-45%;
+					bottom:$grid-gutter-width;
+					line-height:80px;
+					vertical-align: middle;
+					background:$brand-black;
+					color: $brand-orange;
+					padding: 0 $grid-gutter-width/2;
+					font-size: $font-size-large;
+					font-weight:bold;
+					opacity:1;
+					z-index:1;
+					@include transition(opacity .6s ease, transform .6s ease);
+					@include display-flex;
+					@include align-items(center);
+					i{
+						color:$brand-white;
+						margin-right:20px;
+					}
+				}
+			}
+			.page-home-top-dedicace{
+				width: 262px;
+				height: 476px;
+				img{
+					position: absolute;
+					height: 100%;
+				}
+			}
+		}
+		.page-home-social{
+			a{
+				color: $brand-white;
+				&:hover{
+					color: $brand-black;
+				}
+			}
+			.page-home-social-general{
+				overflow:hidden;
+				&:hover{
+					.page-home-social-overlay{
+						opacity:1;
+						*{
+							opacity:1;
+							@include translateY(0);
+						}
+					}
+					.page-home-social-image{
+					}
+					.page-home-social-title{
+						opacity:0;
+						@include translateY(-20px);
+					}
+				}
+			}
+			.page-home-social-image{
+				position: relative;
+				width: 555px;
+				height: 378px;
+				img{
+					position: absolute;
+					min-width: 100%;
+					max-height: 100%;
+					@include translateX(-10%);
+				}
+			}
+			.page-home-social-title{
+				@include box-sizing(border-box);
+				position: absolute;
+				left: 50%;
+				width: 85%;
+				margin-left:-42.5%;
+				bottom:$grid-gutter-width;
+				line-height:80px;
+				vertical-align: middle;
+				background:$brand-black;
+				color: $brand-orange;
+				padding: 0 $grid-gutter-width/2;
+				font-size: $font-size-large;
+				font-weight:bold;
+				opacity:1;
+				z-index:1;
+				@include transition(opacity .6s ease, transform .6s ease);
+				@include display-flex;
+				@include align-items(center);
+				i{
+					color:$brand-white;
+					margin-right:20px;
+				}
+			}
+			.page-home-social-overlay{
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba($brand-black, .8);
+				z-index:1;
+				opacity:0;
+				padding:$grid-gutter-width ($grid-gutter-width+($grid-gutter-width/2));
+				@include transition(opacity .6s ease);
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				@include flex-direction(column);
+				*{					
+					@include translateY(20px);
+					@include transition(opacity .6s ease, transform .6s ease);
+				}
+				h3{
+					width:100%;
+					opacity:0;
+					margin:0;
+					@include align-self(flex-start);
+				}
+				.page-home-social-overlay-cta{
+					flex:1;
+					opacity:0;
+					@include display-flex;
+					@include align-items(center);
+					@include justify-content(center);
+					button{
+					}
+				}
+				.page-home-social-overlay-footer{
+					a{
+						&:hover{
+							color:$brand-orange;
+						}
+					}
+				}
+			}
+			.page-home-social-facebook{		
+				height: calc(50% - ($grid-gutter-width/2));
+				img{
+					height: 100%;
+				}
+				.page-home-social-facebook-image{
+					width: 277px;
+					height: 174px;
+					overflow:hidden;
+					img{
+						position: absolute;
+						min-width: 100%;
+						max-height: 100%;
+						@include translateX(-10%);
+					}
+				}
+				.page-home-social-facebook-content{
+					height: 100%;
+					padding: $grid-gutter-width/2;
+					background: $brand-green;
+					@include display-flex;
+					@include flex-direction(column);
+					h3{
+						margin: 0;
+						margin-bottom:10px;
+					}
+					p{
+						flex: 1;
+					}
+					div{
+						@include align-self(flex-end);
+						ul{
+							margin:0;
+						}
+					}
+				}
+			}
+			.page-home-social-twitter{		
+				height: calc(50% - ($grid-gutter-width/2));
+				img{
+					height: 100%;
+				}
+				.page-home-social-twitter-image{
+					width: 277px;
+					height: 174px;
+					overflow:hidden;
+					img{
+						position: absolute;
+						min-width: 100%;
+						max-height: 100%;
+						@include translateX(-10%);
+					}
+				}
+				.page-home-social-twitter-content{
+					height: 100%;
+					padding: $grid-gutter-width/2;
+					background: $brand-blue;
+					@include display-flex;
+					@include flex-direction(column);
+					h3{
+						margin: 0;
+						margin-bottom:10px;
+					}
+					p{
+						flex: 1;
+					}
+					div{
+						@include align-self(flex-end);
+						ul{
+							margin:0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

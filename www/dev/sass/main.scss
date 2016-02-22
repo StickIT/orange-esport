@@ -4,7 +4,13 @@
 @import 'variables';
 // Bootstrap
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+// Font-awesome
+@import '../../../bower_components/font-awesome/scss/font-awesome';
+// Tools
+@import 'tools';
 // Desktop
+@import 'header';
 @import 'home';
+@import 'footer';
 // Responsives
 @import '_home-responsive'

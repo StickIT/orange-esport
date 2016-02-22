@@ -1,0 +1,26 @@
+.page-container{
+	header{
+		height: $navbar-height + $grid-gutter-width;
+		margin-bottom: $grid-gutter-width;
+		padding-bottom: $grid-gutter-width;
+		border-bottom: $brand-white 3px solid;
+		.row > div{
+			display: inline-block; /* non-flexbox browsers */
+			@include display-flex;
+			@include align-items(flex-start);
+		}
+		h1{
+			font-size:$font-size-h1;
+			line-height:$font-size-h1;
+			padding:0;
+			margin:0;
+			margin-bottom:-10px;
+			font-weight:bold;
+			@include align-self(flex-end);
+		}
+		img{
+			height: $navbar-height;
+			margin-right: $grid-gutter-width;
+		}	
+	}
+}

@@ -1,0 +1,25 @@
+.page-container{	
+	margin-top: $grid-gutter-width;
+	.container-full{
+		width:100%;
+		overflow:hidden;
+	}
+	.bottom-gutter{
+		margin-bottom: $grid-gutter-width;
+	}
+	.no-padding{
+		padding:0;
+	}
+	.btn{
+		border:3px solid;
+		padding-top:10px;
+		font-weight:bold;
+		&.btn-primary{
+			color:$brand-white;
+			&:hover{
+				color:$brand-orange !important;
+				border-color:$brand-orange;
+			}
+		}
+	}
+}
