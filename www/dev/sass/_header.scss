@@ -1,26 +1,38 @@
 .page-container{
 	header{
 		height: $navbar-height + $grid-gutter-width;
-		margin-bottom: $grid-gutter-width;
-		padding-bottom: $grid-gutter-width;
-		border-bottom: $brand-white 3px solid;
+		margin-bottom: ($grid-gutter-width)*2;
+		margin-top: ($grid-gutter-width)*2;
+		// padding-bottom: $grid-gutter-width;
+		// border-bottom: $brand-white 3px solid;
 		.row > div{
 			display: inline-block; /* non-flexbox browsers */
 			@include display-flex;
 			@include align-items(flex-start);
 		}
-		h1{
-			font-size:$font-size-h1;
-			line-height:$font-size-h1;
+		a{
+			text-decoration: none;
+			display: inline-block;
+			color: $brand-white;
+			&:hover{
+				text-decoration: none;
+				color: $brand-white;
+			}
+			h1{
+			font-size:$font-size-sub-headline;
+			line-height:($font-size-sub-headline)+10px;
 			padding:0;
-			margin:0;
-			margin-bottom:-10px;
+			// margin:0;
+			margin-bottom:0;
 			font-weight:bold;
 			@include align-self(flex-end);
+			}
 		}
-		img{
-			height: $navbar-height;
-			margin-right: $grid-gutter-width;
-		}	
+		a{
+			img{
+				height: $navbar-height;
+				margin-right: ($grid-gutter-width)+10px;
+			}	
+		}		
 	}
 }

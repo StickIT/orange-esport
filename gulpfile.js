@@ -22,6 +22,10 @@ gulp.task('lib', function() {
     return gulp.src([
         config.bowerDir + '/jquery/dist/jquery.js',
         config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+        config.bowerDir + '/velocity/velocity.js',
+        config.bowerDir + '/velocity/velocity.ui.js',
+        config.bowerDir + '/parallax/deploy/jquery.parallax.js',
+        config.bowerDir + '/typed.js/js/typed.js',
         config.bowerDir + '/requirejs/require.js'
     ]).pipe(uglify()).pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.publicPath + '/js/lib/'));
@@ -52,6 +56,10 @@ gulp.task('watch', function() {
 gulp.task('serve', ['js'], function() {
     browserSync.init({
         server: config.publicPath
+        // open: 'external',
+        // host: 'esport.orange.dev',
+        // proxy: 'esport.orange.dev',
+        // port: 8080
     });
     gulp.watch(config.devPath + '/js/**/*.js', ['js']);
     gulp.watch(config.publicPath + '/css/**/*.css').on('change', browserSync.reload);

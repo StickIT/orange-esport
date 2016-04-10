@@ -6,13 +6,17 @@ $bootstrap-sass-asset-helper: false !default;
 
 // Brand colors
 $brand-orange:			#ff7900;
+$brand-orange-darker:   #F16E00;
 $brand-yellow:			#ffd200;
 $brand-purple:			#a885d8;
-$brand-pink:			#ff84e6;
+$brand-pink:			#FFB4E6;
 $brand-green:			#50be87;
 $brand-blue:			#4db4e6;
 $brand-black:			#000000;
+$brand-grey:            #595959;
 $brand-white:			#ffffff;
+$brand-grey-dark:       #333333;
+$brand-grey-light:      #666666;
 
 // Brand fonts
 @include font-face("Orange", font-files("../fonts/HelveticaNeueLTStd-Roman.otf"));
@@ -73,6 +77,19 @@ $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Orange font-size
+$font-size-section-title: 60px !default;
+$font-size-headline:      50px !default;
+$font-size-sub-headline:  40px !default;
+$font-size-captions-1:    34px !default;
+$font-size-captions-2:    30px !default;
+$font-size-captions-3:    24px !default;
+$font-size-captions-4:    20px !default;
+$font-size-body:          18px !default;
+$font-size-labels:        16px !default;
+$font-size-small-labels:  14px !default;
+
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14
@@ -161,33 +178,43 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                bold !default;
 
-$btn-default-color:              $brand-orange !default;
+$btn-default-color:              $brand-black !default;
 $btn-default-bg:                 transparent !default;
-$btn-default-border:             $brand-orange !default;
+$btn-default-border:             $brand-black !default;
 
-$btn-primary-color:              #fff !default;
+$btn-primary-color:              $brand-white !default;
 $btn-primary-bg:                 transparent !default;
 $btn-primary-border:             $brand-white !default;
 
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%) !default;
+$btn-success-color:              $brand-black !default;
+$btn-success-bg:                 #32C832 !default;
+$btn-success-border:             #32C832 !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
 $btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+$btn-warning-bg:                 $brand-orange-darker !default;
+$btn-warning-border:             $brand-orange-darker !default;
 
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+$btn-danger-color:               $brand-black !default;
+$btn-danger-bg:                  #CD3C14 !default;
+$btn-danger-border:              #CD3C14 !default;
 
 $btn-link-disabled-color:        $gray-light !default;
+
+$btn-size-small:                 30px !default;
+$btn-size-medium:                40px !default;
+$btn-size-large:                 50px !default;
+
+$btn-padding-size-small:         10px !default;
+$btn-padding-size-medium:        20px !default;
+$btn-padding-size-large:         30px !default;
+
+$btn-border-size:                2px !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius-base:         $border-radius-base !default;
@@ -318,14 +345,14 @@ $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  1024px !default;
+$screen-md:                  1180px !default;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
+$screen-lg:                  1300px !default;
 $screen-lg-min:              $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
@@ -343,7 +370,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         20px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -356,17 +383,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-$container-tablet:             (720px + $grid-gutter-width) !default;
+$container-tablet:             (920px + $grid-gutter-width) !default;
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-desktop:            (1160px + $grid-gutter-width) !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-large-desktop:      (1280px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
@@ -376,7 +403,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    65px !default;
+$navbar-height:                    60px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -884,3 +911,9 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+//== Footer
+//
+//##
+
+$footer-height:               70px !default;

@@ -1,0 +1,119 @@
+$photo-width: 1000px;
+$photo-height: 400px;
+$speech-width: 700px;
+$speech-height: 350px;
+$text-width: 550px;
+$text-height: 200px;
+$logo-width: 150px;
+$logo-height: $logo-width;
+
+#modal-registration-steps{
+	width: 100%;
+	height: 100%;
+	.modal-dialog{
+		width: 100%;
+		height: 100%;
+		margin:0;
+		.modal-content{
+			background: transparent;
+			@include box-shadow(rgba(#000, 0) 0 0 0 0);
+			width: 100%;
+			height: 100%;
+			.parallax-container-steps{
+				width: 100%;
+				height: 100%;
+				margin:0;
+				padding: 0;
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				.speech-photo-left{
+					left: 50% !important;
+					top: 50% !important;
+					width: $photo-width;
+					height: $photo-height;
+					margin-left: -($photo-width/2);
+					margin-top: -($photo-height/1);
+					opacity:0;
+					@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+				}
+				.speech-text-left{
+					left: 50% !important;
+					top: 50% !important;
+					width: $speech-width;
+					height: $speech-height;
+					margin-left: -($speech-width/2);
+					margin-top: -($speech-height/3.5);
+					opacity:0;
+					color: $brand-black;
+					.speech-text-left-bubble{
+						position: absolute;
+						width: $text-width;
+						height: $text-height;
+						top:0;
+						left:$logo-width;
+						padding: $grid-gutter-width*2;
+						background:$brand-white;
+						opacity:0;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						// @include display-flex;
+						// @include align-items(flex-start);
+						// @include justify-content(flex-start);
+						// @include flex-direction(column);
+						.text{
+							font-size: 30px;
+							@include flex(1);
+						}
+						button{
+							position: absolute;
+							bottom:$grid-gutter-width*2;
+							right:$grid-gutter-width*2;
+						}
+					}
+					.speech-text-left-logo{
+						position:absolute;
+						width: $logo-width;
+						height: $logo-height;
+						bottom:0;
+						left:0;
+						background:$brand-white;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						.content-text{
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(center);
+							@include flex-direction(column);
+							.rush{
+								font-size: 20px;
+								line-height: 26px;
+							}
+							.esport{
+								font-size: 30px;
+								font-weight: bold;
+								line-height: 26px;
+								color: $brand-orange;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+.typed-cursor{
+    opacity: 1;
+	font-size: 30px;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@include keyframes(blink){
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

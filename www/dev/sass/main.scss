@@ -12,5 +12,8 @@
 @import 'header';
 @import 'home';
 @import 'footer';
+@import 'article';
+@import 'registration-steps';
 // Responsives
-@import '_home-responsive'
+@import '_home-responsive';
+@import '_article-responsive';
