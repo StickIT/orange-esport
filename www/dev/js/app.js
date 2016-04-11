@@ -51,14 +51,19 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
             // Animate speechbubble
             jQuery('.parallax-step-00 .speech-text-left, .parallax-step-00 .speech-photo-left').velocity({opacity: [1, 0]}, { duration: 100 });
             // jQuery('.parallax-step-00 .speech-photo-left img').velocity({opacity: [1, 0], translateY: ['0', '-150%']}, { duration: 500, easing: 'ease-out' }); 
-            jQuery('.parallax-step-00 .speech-text-left-logo').velocity({width: ['150px', '0']}).velocity({left: ['0', '50%'], bottom: ['0', '50%']}, { 
-                duration: 500,
-                easing: 'ease-out',
+            jQuery('.parallax-step-00 .speech-text-left-logo-start').velocity({scaleX: ['1', '0']}, {duration: 300, easing: 'ease-out'}).velocity({left: ['0', '50%'], bottom: ['0', '50%']}, { 
+                duration: 800,
+                easing: [ .24,0,.29,1.29 ],
+                delay: 200,
                 complete: function(){
-                    jQuery('.parallax-step-00 .speech-text-left-logo').velocity('callout.pulse', {duration: 300, delay: 200});
-                    jQuery('.parallax-step-00 .speech-text-left .speech-text-left-bubble').velocity({ opacity: [1, 0], width: ['550px', '0px'] }, { 
+                    // jQuery('.parallax-step-00 .speech-text-left-logo-start').velocity('callout.pulse', {duration: 300});
+                    jQuery('.parallax-step-00 .speech-photo-left img').velocity({opacity: [1, 0], translateY: ['0', '-150%']}, { duration: 800, easing: [ .24,0,.29,1.29 ] });
+                    jQuery('.parallax-step-00 .speech-text-left .speech-text-left-bubble').velocity({ 
+                        opacity: [1, 0], 
+                        width: ['550px', '0px'] }, 
+                        { 
                         duration: 500,
-                        easing: 'ease-out',
+                        easing: [ .24,0,.29,1.29 ],
                         complete: function(){                                    
                             jQuery('.parallax-step-00 .text').typed({ 
                                 strings: ["Salut ! Moi c'est Rush. <br> <b>Et toi t'es qui ?</b>"],
