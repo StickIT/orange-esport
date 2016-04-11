@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1337614500') format('opentype');
 }
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1337614508') format('opentype');
   font-weight: 700;
 }
 /*!
@@ -13410,7 +13410,15 @@ body {
   height: 100%;
 }
 /* line 22, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content form {
+  width: 100%;
+  height: 100%;
+}
+/* line 26, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -13422,7 +13430,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 30, ../dev/sass/_registration-steps.scss */
+/* line 37, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left {
   left: 50% !important;
   top: 50% !important;
@@ -13431,10 +13439,14 @@ body {
   margin-left: -500px;
   margin-top: -400px;
   opacity: 0;
+}
+/* line 45, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left img {
+  opacity: 0;
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 40, ../dev/sass/_registration-steps.scss */
+/* line 50, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left {
   left: 50% !important;
   top: 50% !important;
@@ -13445,32 +13457,71 @@ body {
   opacity: 0;
   color: #000000;
 }
-/* line 49, ../dev/sass/_registration-steps.scss */
+/* line 59, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble {
   position: absolute;
   width: 550px;
   height: 200px;
   top: 0;
   left: 150px;
-  padding: 40px;
-  background: #ffffff;
+  padding: 20px;
+  background: #000000;
+  color: #ffffff;
   opacity: 0;
+  overflow: hidden;
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 63, ../dev/sass/_registration-steps.scss */
+/* line 70, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  left: -25px;
+  background: #ff7900;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 85, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble .text {
-  font-size: 30px;
+  font-size: 24px;
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 67, ../dev/sass/_registration-steps.scss */
-#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble button {
+/* line 90, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble a.btn {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
 }
-/* line 73, ../dev/sass/_registration-steps.scss */
+/* line 96, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #ff7900;
+  color: #ff7900;
+  outline: none;
+}
+/* line 101, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].typedInput {
+  width: 180px;
+  margin: 0 10px;
+  background: transparent;
+}
+/* line 106, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"]:focus {
+  -webkit-box-shadow: transparent 0 0 0 0;
+  box-shadow: transparent 0 0 0 0;
+}
+/* line 109, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].has-error {
+  border-bottom: 2px solid red;
+  color: red;
+}
+/* line 115, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo {
   position: absolute;
   width: 150px;
@@ -13481,7 +13532,7 @@ body {
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 81, ../dev/sass/_registration-steps.scss */
+/* line 123, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text {
   width: 100%;
   height: 100%;
@@ -13494,20 +13545,56 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 88, ../dev/sass/_registration-steps.scss */
+/* line 130, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .rush {
   font-size: 20px;
   line-height: 26px;
 }
-/* line 92, ../dev/sass/_registration-steps.scss */
+/* line 134, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .esport {
   font-size: 30px;
   font-weight: bold;
   line-height: 26px;
   color: #ff7900;
 }
+/* line 142, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: 50%;
+  left: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: black 0 0 50px 0;
+  box-shadow: black 0 0 50px 0;
+}
+/* line 150, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/* line 157, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .rush {
+  font-size: 20px;
+  line-height: 26px;
+}
+/* line 161, ../dev/sass/_registration-steps.scss */
+#modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .esport {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #ff7900;
+}
 
-/* line 107, ../dev/sass/_registration-steps.scss */
+/* line 176, ../dev/sass/_registration-steps.scss */
 .typed-cursor {
   opacity: 1;
   font-size: 30px;
