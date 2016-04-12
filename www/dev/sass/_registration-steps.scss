@@ -19,6 +19,7 @@ $logo-height: $logo-width;
 			@include box-shadow(rgba(#000, 0) 0 0 0 0);
 			width: 100%;
 			height: 100%;
+			overflow:hidden;
 			form{				
 				width: 100%;
 				height: 100%;
@@ -35,6 +36,67 @@ $logo-height: $logo-width;
 				@include align-items(center);
 				@include justify-content(center);
 				.speech-photo-left{
+					.speech-image{
+						opacity:0;
+					}
+					.speech-photo-left-card{
+						width: 100%;
+						height: 100%;
+						background:url(../resources/bg-card.png);
+						background-size:cover;
+						background-repeat: no-repeat;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						@include display-flex;
+						@include align-items(center);
+						@include justify-content(space-between);
+						@include flex-direction(row);
+						.card-member{
+							position: relative;
+							width:300px;
+							text-align: center;
+							margin-left:5%;
+							img{
+								width: 100%;
+							}
+							.card-username{
+								position: absolute;
+							    width: 100%;
+							    height: 50px;
+							    left: 50%;
+							    top: 50%;
+							    margin-left: -53%;
+							    margin-top: -10px;
+							    text-align: center;
+							    font-size: 20px;
+							}
+							.icon-validate{
+								width: 150px;
+								height: 150px;
+							}
+						}
+						.card-title{
+							@include flex(1);
+							@include text-shadow(rgba($brand-black, .8) 0 0 3px);
+							text-align:center;
+							margin:0 10%;
+							h3{
+								font-size: 30px;
+							}
+							h2{
+								font-size: 40px;
+							}
+							h6{
+								font-size: 16px;
+								font-weight: normal;
+								color: $brand-orange;
+								text-transform: uppercase;
+							}
+							hr{
+								width:100px;
+								border-color:$brand-orange;
+							}
+						}
+					}
 					left: 50% !important;
 					top: 50% !important;
 					width: $photo-width;
@@ -42,9 +104,122 @@ $logo-height: $logo-width;
 					margin-left: -($photo-width/2);
 					margin-top: -($photo-height/1);
 					opacity:0;
-					img{
+					.image-landscape{
 						opacity:0;
 						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+					}
+					.game-selection{
+						position: relative;
+						padding:0;
+						height: 100%;
+						text-align:center;
+						background:green;
+						.game-title{
+							width:80%;
+							margin-top: 20px;
+							text-align:center;
+							background:rgba($brand-black, .9);
+							line-height:40px;
+							padding-top:2px;
+						}
+						&.game-selection-action{
+							background:red;
+						}
+						&.game-selection-action{
+							background:transparent;
+							background-image:url(../resources/game/game-action.jpg);
+							background-position: -300px top;
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						&.game-selection-strategy{
+							background:transparent;
+							background-image:url(../resources/game/game-strategy.jpg);
+							background-position: -250px top;
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						&.game-selection-sport{
+							background:transparent;
+							background-image:url(../resources/game/game-sport.jpg);
+							background-position: -250px top;
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						&.game-selection-fight{
+							background:transparent;
+							background-image:url(../resources/game/game-combat.jpg);
+							background-position: -250px top;
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						/* Cachons la case à cocher */
+						[type="checkbox"]:not(:checked),
+						[type="checkbox"]:checked {
+							position: absolute;
+							left: -9999px;
+						}						 
+						/* on prépare le label */
+						[type="checkbox"]:not(:checked) + label,
+						[type="checkbox"]:checked + label {
+							position: relative; /* permet de positionner les pseudo-éléments */
+							cursor: pointer;    /* affiche un curseur adapté */
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(flex-start);
+							@include flex-direction(column);
+						}
+						[type="checkbox"]:not(:checked) + label{
+							background:transparent;
+							&:hover{
+								background:rgba($brand-orange, .5);
+							}
+							@include transition(background .3s ease);
+						}
+						[type="checkbox"]:checked + label {
+							background:rgba($brand-orange, .9);
+							@include transition(background .3s ease);
+						}
+						/* Aspect des checkboxes */
+						/* :before sert à créer la case à cocher */
+						[type="checkbox"]:not(:checked) + label:before,
+						[type="checkbox"]:checked + label:before {
+							content: '';
+							position: absolute;
+							left:50%; top: 50%;
+							margin-left: -50px; margin-top: -50px;
+							width: 100px; height: 100px; /* dim. de la case */
+						}
+
+						/* Aspect général de la coche */
+						[type="checkbox"]:not(:checked) + label:after,
+						[type="checkbox"]:checked + label:after {
+							content: '';
+							position: absolute;
+							left:50%; top: 50%;
+							margin-left: -40.5px; margin-top: -40.5px;
+							width: 81px; height: 81px; /* dim. de la case */
+							color: $brand-white;
+							background:url(../resources/icon-validate.png) no-repeat center center;
+							background-size: cover;
+							@include transition(opacity .3s ease);
+						}
+						[type="checkbox"]:not(:checked) + label:after{
+							opacity:0;
+							@include transition(opacity .3s ease);
+						}
+						/* Aspect si "pas cochée" */
+						[type="checkbox"]:not(:checked) + label:after {
+						  opacity: 0; /* coche invisible */
+						  transform: scale(0); /* mise à l'échelle à 0 */
+						}
+						/* Aspect si "cochée" */
+						[type="checkbox"]:checked + label:after {
+						  opacity: 1; /* coche opaque */
+						  transform: scale(1); /* mise à l'échelle 1:1 */
+						}
 					}
 				}
 				.speech-text-left{
@@ -128,8 +303,9 @@ $logo-height: $logo-width;
 							@include justify-content(center);
 							@include flex-direction(column);
 							.rush{
-								font-size: 20px;
+								font-size: 22px;
 								line-height: 26px;
+								font-weight: bold;
 							}
 							.esport{
 								font-size: 30px;
@@ -155,8 +331,9 @@ $logo-height: $logo-width;
 							@include justify-content(center);
 							@include flex-direction(column);
 							.rush{
-								font-size: 20px;
+								font-size: 22px;
 								line-height: 26px;
+								font-weight: bold;
 							}
 							.esport{
 								font-size: 30px;
@@ -167,22 +344,26 @@ $logo-height: $logo-width;
 						}
 					}
 				}
-			}
-
+				.speech-welcome{
+					width: 100%;
+					height: 100%;
+					background:red;
+				}
+			}			
 		}
 	}
 }
 
 .typed-cursor{
-    opacity: 1;
+	opacity: 1;
 	font-size: 30px;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
 }
 
 @include keyframes(blink){
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
