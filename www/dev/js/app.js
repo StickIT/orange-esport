@@ -356,14 +356,12 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
                 }
             });       
         }
-        // Step 07 : Bravo !
+        // Step 07 : Plus d'informations !
         function registrationStep07(){
             // Load Parallax
             jQuery('.parallax-step-07').parallax();
             // Remove class
             jQuery('.parallax-step-07').removeClass('hidden');
-            // Username card            
-            jQuery('.parallax-step-07 .card-username').html(pseudoUser);
             // Animate speechbubble
             jQuery('.parallax-step-07 .speech-text-left, .parallax-step-07 .speech-photo-left').velocity({opacity: [1, 0]}, { duration: 100 });
             jQuery('.parallax-step-07 .speech-photo-left .speech-photo-left-card').velocity({opacity: [1, 0], translateY: ['0', '-150%']}, { duration: 500, easing: [ .24,0,.29,1.29 ] }); 
@@ -377,7 +375,7 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
                         easing: [ .24,0,.29,1.29 ],
                         complete: function(){                                    
                             jQuery('.parallax-step-07 .text').typed({ 
-                                strings: ["Bravo !, <br> <b>Tu viens de remporter ton premier badge eSport !</b>"],
+                                strings: ["Encore quelques infos, <br> <b>pour qu'on garde le contact !</b>"],
                                 showCursor: false,
                                 callback: function() {   
                                     // jQuery('.parallax-step-07 .speech-text-left .speech-text-left-bubble').velocity('callout.swing', {duration: 500});                                
@@ -387,6 +385,51 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
                                         jQuery('.parallax-step-07 .speech-text-left, .parallax-step-07 .speech-photo-left').velocity({opacity: [0, 1]}, { duration: 500, display: "none" });
                                         jQuery('.parallax-step-07 .speech-photo-left .speech-photo-left-card').velocity({opacity: [0, 1], translateY: ['-150%', '0']}, { duration: 500, display: "none" }); 
                                         jQuery('.parallax-step-07 .speech-text-left-logo, .parallax-step-07 .speech-text-left-bubble').velocity({opacity: [0, 1], translateY: ['150%', '0']}, {
+                                            duration: 500, 
+                                            display: 'none',
+                                            complete: function(){
+                                                registrationStep08();
+                                            }
+                                        }); 
+                                    });  
+                                }
+                            });
+                        }
+                    });
+                }
+            });       
+        }
+        // Step 08 : Bravo !
+        function registrationStep08(){
+            // Load Parallax
+            jQuery('.parallax-step-08').parallax();
+            // Remove class
+            jQuery('.parallax-step-08').removeClass('hidden');
+            // Username card            
+            jQuery('.parallax-step-08 .card-username').html(pseudoUser);
+            // Animate speechbubble
+            jQuery('.parallax-step-08 .speech-text-left, .parallax-step-08 .speech-photo-left').velocity({opacity: [1, 0]}, { duration: 100 });
+            jQuery('.parallax-step-08 .speech-photo-left .speech-photo-left-card').velocity({opacity: [1, 0], translateY: ['0', '-150%']}, { duration: 500, easing: [ .24,0,.29,1.29 ] }); 
+            jQuery('.parallax-step-08 .speech-text-left-logo').velocity('transition.bounceUpIn', { 
+                duration: 500,
+                easing: [ .24,0,.29,1.29 ],
+                complete: function(){
+                    jQuery('.parallax-step-08 .speech-text-left-logo').velocity('callout.tada', {duration: 300});
+                    jQuery('.parallax-step-08 .speech-text-left .speech-text-left-bubble').velocity({ opacity: [1, 0], width: ['80%', '0px'] }, { 
+                        duration: 500,
+                        easing: [ .24,0,.29,1.29 ],
+                        complete: function(){                                    
+                            jQuery('.parallax-step-08 .text').typed({ 
+                                strings: ["Bravo ! <br> <b>Tu viens de remporter ton premier badge eSport !</b>"],
+                                showCursor: false,
+                                callback: function() {   
+                                    // jQuery('.parallax-step-08 .speech-text-left .speech-text-left-bubble').velocity('callout.swing', {duration: 500});                                
+                                    jQuery('.parallax-step-08 .speech-text-left-bubble a').click(function(e){
+                                        e.preventDefault();
+                                        e.stopPropagation();  
+                                        jQuery('.parallax-step-08 .speech-text-left, .parallax-step-08 .speech-photo-left').velocity({opacity: [0, 1]}, { duration: 500, display: "none" });
+                                        jQuery('.parallax-step-08 .speech-photo-left .speech-photo-left-card').velocity({opacity: [0, 1], translateY: ['-150%', '0']}, { duration: 500, display: "none" }); 
+                                        jQuery('.parallax-step-08 .speech-text-left-logo, .parallax-step-08 .speech-text-left-bubble').velocity({opacity: [0, 1], translateY: ['150%', '0']}, {
                                             duration: 500, 
                                             display: 'none',
                                             complete: function(){

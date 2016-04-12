@@ -50,6 +50,16 @@ $logo-height: $logo-width;
 						@include align-items(center);
 						@include justify-content(space-between);
 						@include flex-direction(row);
+						input[type="text"], input[type="password"],{
+							background:transparent;
+							border:none;
+							border-bottom:1px solid rgba($brand-white, .5);
+							color:$brand-white;
+							text-align: center;
+							outline:none;
+							padding:0;
+							@include box-shadow(rgba(#000,0) 0 0 0 0);
+						}
 						.card-member{
 							position: relative;
 							width:300px;
@@ -79,6 +89,7 @@ $logo-height: $logo-width;
 							@include text-shadow(rgba($brand-black, .8) 0 0 3px);
 							text-align:center;
 							margin:0 10%;
+							margin-bottom:10%;
 							h3{
 								font-size: 30px;
 							}
