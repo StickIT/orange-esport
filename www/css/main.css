@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1337614500') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1456173997') format('opentype');
 }
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1337614508') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1456173997') format('opentype');
   font-weight: 700;
 }
 /*!
@@ -13961,6 +13961,37 @@ body {
     opacity: 1;
   }
 }
+/* line 1, ../dev/sass/_game-bus.scss */
+.game-bus {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+/* line 6, ../dev/sass/_game-bus.scss */
+.game-bus h2 {
+  color: #ff7900;
+  font-size: bold;
+}
+/* line 15, ../dev/sass/_game-bus.scss */
+.game-bus .page-home-top-content {
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* line 17, ../dev/sass/_game-bus.scss */
+.game-bus .page-home-top-content ul {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   /* line 13, ../dev/sass/_home-responsive.scss */
   body .page-container {

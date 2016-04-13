@@ -39,7 +39,7 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
         jQuery(document).ready(function() {
             console.log('It works !');
             // Open steps
-            jQuery('#modal-registration-steps').modal('show');
+            // jQuery('#modal-registration-steps').modal('show');
             registrationStep00();
         });
         // Close modal

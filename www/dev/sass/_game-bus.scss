@@ -1,0 +1,24 @@
+.game-bus{
+	height: 100%;
+	@include display-flex;
+	@include justify-content(space-between);
+	@include flex-direction(column);
+	h2{
+		color: $brand-orange;
+		font-size: bold;
+	}
+	&.game-step-01{
+		
+	}
+	&.game-step-03{
+	}
+	.page-home-top-content{
+		@include flex(1);
+		ul{
+			height: 100%;
+			@include display-flex;
+			@include justify-content(space-between);
+			@include flex-direction(column);
+		}
+	}
+}
