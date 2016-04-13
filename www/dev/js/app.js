@@ -37,12 +37,19 @@ require.config({
 require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'], function(jQuery, Velocity) {
     jQuery(function() {
         jQuery(document).ready(function() {
-         console.log('It works !');
-            // Open modal at start
+            console.log('It works !');
+            // Open steps
             jQuery('#modal-registration-steps').modal('show');
-            // Steps
             registrationStep00();
         });
+        // Close modal
+        jQuery('.close-modal').click(function(e){
+
+            e.preventDefault();
+            e.stopPropagation();  
+            console.log('closed');
+            jQuery('.modal').modal('hide');
+        })
         // Registration Sequences        
         // Step 00 : Welcome
         function registrationStep00(){
@@ -381,16 +388,23 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
                                     // jQuery('.parallax-step-07 .speech-text-left .speech-text-left-bubble').velocity('callout.swing', {duration: 500});                                
                                     jQuery('.parallax-step-07 .speech-text-left-bubble a').click(function(e){
                                         e.preventDefault();
-                                        e.stopPropagation();  
-                                        jQuery('.parallax-step-07 .speech-text-left, .parallax-step-07 .speech-photo-left').velocity({opacity: [0, 1]}, { duration: 500, display: "none" });
-                                        jQuery('.parallax-step-07 .speech-photo-left .speech-photo-left-card').velocity({opacity: [0, 1], translateY: ['-150%', '0']}, { duration: 500, display: "none" }); 
-                                        jQuery('.parallax-step-07 .speech-text-left-logo, .parallax-step-07 .speech-text-left-bubble').velocity({opacity: [0, 1], translateY: ['150%', '0']}, {
-                                            duration: 500, 
-                                            display: 'none',
-                                            complete: function(){
-                                                registrationStep08();
-                                            }
-                                        }); 
+                                        e.stopPropagation();
+                                        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;  
+                                        if(jQuery('input[name="reg-email"]').val() != '' && testEmail.test(jQuery('input[name="reg-email"]').val()) && jQuery('input[name="reg-password"]').val() != '' && jQuery('input[name="reg-conf-password"]').val() != ''){
+                                            jQuery('.parallax-step-07 .speech-text-left, .parallax-step-07 .speech-photo-left').velocity({opacity: [0, 1]}, { duration: 500, display: "none" });
+                                            jQuery('.parallax-step-07 .speech-photo-left .speech-photo-left-card').velocity({opacity: [0, 1], translateY: ['-150%', '0']}, { duration: 500, display: "none" }); 
+                                            jQuery('.parallax-step-07 .speech-text-left-logo, .parallax-step-07 .speech-text-left-bubble').velocity({opacity: [0, 1], translateY: ['150%', '0']}, {
+                                                duration: 500, 
+                                                display: 'none',
+                                                complete: function(){
+                                                    registrationStep08();
+                                                }
+                                            }); 
+                                        }else{
+                                            jQuery('.parallax-step-07 .speech-text-left .speech-text-left-bubble').velocity('callout.shake');
+                                            jQuery('.parallax-step-07 .text').html('<b>Tu dois remplir correctement ces informations...</b>');
+                                        }
+                                        
                                     });  
                                 }
                             });

@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1337614500') format('opentype');
 }
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1337614508') format('opentype');
   font-weight: 700;
 }
 /*!
@@ -7777,7 +7777,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: #15171b;
 }
 /* line 73, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
 .modal-backdrop.fade {
@@ -7786,8 +7786,8 @@ button.close {
 }
 /* line 74, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
 .modal-backdrop.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 
 /* line 79, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
@@ -13453,17 +13453,25 @@ body {
 }
 
 /* line 10, ../dev/sass/_registration-steps.scss */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* line 17, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps {
   width: 100%;
   height: 100%;
 }
-/* line 13, ../dev/sass/_registration-steps.scss */
+/* line 20, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-/* line 17, ../dev/sass/_registration-steps.scss */
+/* line 24, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content {
   background: transparent;
   -webkit-box-shadow: transparent 0 0 0 0;
@@ -13472,12 +13480,12 @@ body {
   height: 100%;
   overflow: hidden;
 }
-/* line 23, ../dev/sass/_registration-steps.scss */
+/* line 30, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content form {
   width: 100%;
   height: 100%;
 }
-/* line 27, ../dev/sass/_registration-steps.scss */
+/* line 34, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps {
   position: absolute;
   top: 0;
@@ -13493,7 +13501,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 38, ../dev/sass/_registration-steps.scss */
+/* line 45, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left {
   left: 50% !important;
   top: 50% !important;
@@ -13503,11 +13511,11 @@ body {
   margin-top: -400px;
   opacity: 0;
 }
-/* line 39, ../dev/sass/_registration-steps.scss */
+/* line 46, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-image {
   opacity: 0;
 }
-/* line 42, ../dev/sass/_registration-steps.scss */
+/* line 49, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card {
   width: 100%;
   height: 100%;
@@ -13525,7 +13533,7 @@ body {
   -webkit-flex-direction: row;
   flex-direction: row;
 }
-/* line 53, ../dev/sass/_registration-steps.scss */
+/* line 60, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card input[type="text"], #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card input[type="password"] {
   background: transparent;
   border: none;
@@ -13537,18 +13545,18 @@ body {
   -webkit-box-shadow: transparent 0 0 0 0;
   box-shadow: transparent 0 0 0 0;
 }
-/* line 63, ../dev/sass/_registration-steps.scss */
+/* line 70, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member {
   position: relative;
   width: 300px;
   text-align: center;
   margin-left: 5%;
 }
-/* line 68, ../dev/sass/_registration-steps.scss */
+/* line 75, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member img {
   width: 100%;
 }
-/* line 71, ../dev/sass/_registration-steps.scss */
+/* line 78, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member .card-username {
   position: absolute;
   width: 100%;
@@ -13560,12 +13568,12 @@ body {
   text-align: center;
   font-size: 20px;
 }
-/* line 82, ../dev/sass/_registration-steps.scss */
+/* line 89, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member .icon-validate {
   width: 150px;
   height: 150px;
 }
-/* line 87, ../dev/sass/_registration-steps.scss */
+/* line 94, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title {
   -webkit-flex: 1;
   flex: 1;
@@ -13574,33 +13582,33 @@ body {
   margin: 0 10%;
   margin-bottom: 10%;
 }
-/* line 93, ../dev/sass/_registration-steps.scss */
+/* line 100, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h3 {
   font-size: 30px;
 }
-/* line 96, ../dev/sass/_registration-steps.scss */
+/* line 103, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h2 {
   font-size: 40px;
 }
-/* line 99, ../dev/sass/_registration-steps.scss */
+/* line 106, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h6 {
   font-size: 16px;
   font-weight: normal;
   color: #ff7900;
   text-transform: uppercase;
 }
-/* line 105, ../dev/sass/_registration-steps.scss */
+/* line 112, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title hr {
   width: 100px;
   border-color: #ff7900;
 }
-/* line 118, ../dev/sass/_registration-steps.scss */
+/* line 125, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .image-landscape {
   opacity: 0;
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 122, ../dev/sass/_registration-steps.scss */
+/* line 129, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection {
   position: relative;
   padding: 0;
@@ -13615,7 +13623,7 @@ body {
   /* Aspect si "pas cochée" */
   /* Aspect si "cochée" */
 }
-/* line 128, ../dev/sass/_registration-steps.scss */
+/* line 135, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection .game-title {
   width: 80%;
   margin-top: 20px;
@@ -13624,11 +13632,11 @@ body {
   line-height: 40px;
   padding-top: 2px;
 }
-/* line 136, ../dev/sass/_registration-steps.scss */
+/* line 143, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-action {
   background: red;
 }
-/* line 139, ../dev/sass/_registration-steps.scss */
+/* line 146, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-action {
   background: transparent;
   background-image: url(../resources/game/game-action.jpg);
@@ -13636,7 +13644,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 146, ../dev/sass/_registration-steps.scss */
+/* line 153, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-strategy {
   background: transparent;
   background-image: url(../resources/game/game-strategy.jpg);
@@ -13644,7 +13652,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 153, ../dev/sass/_registration-steps.scss */
+/* line 160, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-sport {
   background: transparent;
   background-image: url(../resources/game/game-sport.jpg);
@@ -13652,7 +13660,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 160, ../dev/sass/_registration-steps.scss */
+/* line 167, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-fight {
   background: transparent;
   background-image: url(../resources/game/game-combat.jpg);
@@ -13660,13 +13668,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 168, ../dev/sass/_registration-steps.scss */
+/* line 175, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked),
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
 }
-/* line 174, ../dev/sass/_registration-steps.scss */
+/* line 181, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label,
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label {
   position: relative;
@@ -13684,25 +13692,25 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 185, ../dev/sass/_registration-steps.scss */
+/* line 192, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label {
   background: transparent;
   -webkit-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-/* line 187, ../dev/sass/_registration-steps.scss */
+/* line 194, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:hover {
   background: rgba(255, 121, 0, 0.5);
 }
-/* line 192, ../dev/sass/_registration-steps.scss */
+/* line 199, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label {
   background: rgba(255, 121, 0, 0.9);
   -webkit-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-/* line 198, ../dev/sass/_registration-steps.scss */
+/* line 205, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:before,
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:before {
   content: '';
@@ -13715,7 +13723,7 @@ body {
   height: 100px;
   /* dim. de la case */
 }
-/* line 208, ../dev/sass/_registration-steps.scss */
+/* line 215, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after,
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:after {
   content: '';
@@ -13734,28 +13742,28 @@ body {
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-/* line 220, ../dev/sass/_registration-steps.scss */
+/* line 227, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-/* line 225, ../dev/sass/_registration-steps.scss */
+/* line 232, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   /* coche invisible */
   transform: scale(0);
   /* mise à l'échelle à 0 */
 }
-/* line 230, ../dev/sass/_registration-steps.scss */
+/* line 237, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:after {
   opacity: 1;
   /* coche opaque */
   transform: scale(1);
   /* mise à l'échelle 1:1 */
 }
-/* line 236, ../dev/sass/_registration-steps.scss */
+/* line 243, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left {
   left: 50% !important;
   top: 50% !important;
@@ -13766,7 +13774,7 @@ body {
   opacity: 0;
   color: #000000;
 }
-/* line 245, ../dev/sass/_registration-steps.scss */
+/* line 252, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble {
   position: absolute;
   width: 550px;
@@ -13781,7 +13789,7 @@ body {
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 256, ../dev/sass/_registration-steps.scss */
+/* line 263, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble:before {
   content: "";
   position: absolute;
@@ -13795,42 +13803,42 @@ body {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 271, ../dev/sass/_registration-steps.scss */
+/* line 278, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble .text {
   font-size: 24px;
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 276, ../dev/sass/_registration-steps.scss */
+/* line 283, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble a.btn {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
-/* line 282, ../dev/sass/_registration-steps.scss */
+/* line 289, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"] {
   border: none;
   border-bottom: 2px solid #ff7900;
   color: #ff7900;
   outline: none;
 }
-/* line 287, ../dev/sass/_registration-steps.scss */
+/* line 294, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].typedInput {
   width: 180px;
   margin: 0 10px;
   background: transparent;
 }
-/* line 292, ../dev/sass/_registration-steps.scss */
+/* line 299, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"]:focus {
   -webkit-box-shadow: transparent 0 0 0 0;
   box-shadow: transparent 0 0 0 0;
 }
-/* line 295, ../dev/sass/_registration-steps.scss */
+/* line 302, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].has-error {
   border-bottom: 2px solid red;
   color: red;
 }
-/* line 301, ../dev/sass/_registration-steps.scss */
+/* line 308, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo {
   position: absolute;
   width: 150px;
@@ -13841,7 +13849,7 @@ body {
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 309, ../dev/sass/_registration-steps.scss */
+/* line 316, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text {
   width: 100%;
   height: 100%;
@@ -13854,20 +13862,20 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 316, ../dev/sass/_registration-steps.scss */
+/* line 323, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .rush {
   font-size: 22px;
   line-height: 26px;
   font-weight: bold;
 }
-/* line 321, ../dev/sass/_registration-steps.scss */
+/* line 328, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .esport {
   font-size: 30px;
   font-weight: bold;
   line-height: 26px;
   color: #ff7900;
 }
-/* line 329, ../dev/sass/_registration-steps.scss */
+/* line 336, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start {
   position: absolute;
   width: 150px;
@@ -13878,7 +13886,7 @@ body {
   -webkit-box-shadow: black 0 0 50px 0;
   box-shadow: black 0 0 50px 0;
 }
-/* line 337, ../dev/sass/_registration-steps.scss */
+/* line 344, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text {
   width: 100%;
   height: 100%;
@@ -13891,27 +13899,27 @@ body {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-/* line 344, ../dev/sass/_registration-steps.scss */
+/* line 351, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .rush {
   font-size: 22px;
   line-height: 26px;
   font-weight: bold;
 }
-/* line 349, ../dev/sass/_registration-steps.scss */
+/* line 356, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .esport {
   font-size: 30px;
   font-weight: bold;
   line-height: 26px;
   color: #ff7900;
 }
-/* line 358, ../dev/sass/_registration-steps.scss */
+/* line 365, ../dev/sass/_registration-steps.scss */
 #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-welcome {
   width: 100%;
   height: 100%;
   background: red;
 }
 
-/* line 368, ../dev/sass/_registration-steps.scss */
+/* line 375, ../dev/sass/_registration-steps.scss */
 .typed-cursor {
   opacity: 1;
   font-size: 30px;
@@ -15540,5 +15548,465 @@ body {
     font-weight: bold;
     line-height: 12px;
     color: #ff7900;
+  }
+}
+@media (min-width: 768px) and (max-width: 1179px) and (orientation: portrait) {
+  /* line 389, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 392, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  /* line 396, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content {
+    background: transparent;
+    -webkit-box-shadow: transparent 0 0 0 0;
+    box-shadow: transparent 0 0 0 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  /* line 402, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content form {
+    width: 100%;
+    height: 100%;
+  }
+  /* line 406, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  /* line 417, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left {
+    left: 50% !important;
+    top: 50% !important;
+    width: 666.66667px;
+    height: 266.66667px;
+    margin-left: -333.33333px;
+    margin-top: -355.55556px;
+    opacity: 0;
+  }
+  /* line 418, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-image {
+    opacity: 0;
+  }
+  /* line 421, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card {
+    width: 100%;
+    height: 100%;
+    background: url(../resources/bg-card.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: black 0 0 50px 0;
+    box-shadow: black 0 0 50px 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  /* line 432, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card input[type="text"], #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-align: center;
+    outline: none;
+    padding: 0;
+    -webkit-box-shadow: transparent 0 0 0 0;
+    box-shadow: transparent 0 0 0 0;
+  }
+  /* line 442, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member {
+    position: relative;
+    width: 30%;
+    text-align: center;
+    margin-left: 5%;
+  }
+  /* line 447, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member img {
+    width: 100%;
+  }
+  /* line 450, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member .card-username {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    margin-left: -53%;
+    margin-top: -10px;
+    text-align: center;
+    font-size: 20px;
+  }
+  /* line 461, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-member .icon-validate {
+    width: 150px;
+    height: 150px;
+  }
+  /* line 466, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title {
+    -webkit-flex: 1;
+    flex: 1;
+    text-shadow: rgba(0, 0, 0, 0.8) 0 0 3px;
+    text-align: center;
+    margin: 0 10%;
+    margin-bottom: 0%;
+  }
+  /* line 472, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h3 {
+    font-size: 24px;
+  }
+  /* line 475, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h2 {
+    font-size: 26px;
+  }
+  /* line 478, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title h6 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ff7900;
+    text-transform: uppercase;
+  }
+  /* line 484, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .speech-photo-left-card .card-title hr {
+    width: 100px;
+    border-color: #ff7900;
+  }
+  /* line 497, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .image-landscape {
+    opacity: 0;
+    -webkit-box-shadow: black 0 0 50px 0;
+    box-shadow: black 0 0 50px 0;
+  }
+  /* line 501, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    background: green;
+    /* Cachons la case à cocher */
+    /* on prépare le label */
+    /* Aspect des checkboxes */
+    /* :before sert à créer la case à cocher */
+    /* Aspect général de la coche */
+    /* Aspect si "pas cochée" */
+    /* Aspect si "cochée" */
+  }
+  /* line 507, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection .game-title {
+    width: 80%;
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    line-height: 40px;
+    padding-top: 2px;
+  }
+  /* line 515, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-action {
+    background: red;
+  }
+  /* line 518, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-action {
+    background: transparent;
+    background-image: url(../resources/game/game-action.jpg);
+    background-position: -200px top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* line 525, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-strategy {
+    background: transparent;
+    background-image: url(../resources/game/game-strategy.jpg);
+    background-position: -130px top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* line 532, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-sport {
+    background: transparent;
+    background-image: url(../resources/game/game-sport.jpg);
+    background-position: -180px top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* line 539, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection.game-selection-fight {
+    background: transparent;
+    background-image: url(../resources/game/game-combat.jpg);
+    background-position: -180px top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* line 547, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked),
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  /* line 553, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label,
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label {
+    position: relative;
+    /* permet de positionner les pseudo-éléments */
+    cursor: pointer;
+    /* affiche un curseur adapté */
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  /* line 564, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label {
+    background: transparent;
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+  /* line 566, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:hover {
+    background: rgba(255, 121, 0, 0.5);
+  }
+  /* line 571, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label {
+    background: rgba(255, 121, 0, 0.9);
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+  /* line 577, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:before,
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    /* dim. de la case */
+  }
+  /* line 587, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after,
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40.5px;
+    margin-top: -40.5px;
+    width: 81px;
+    height: 81px;
+    /* dim. de la case */
+    color: #ffffff;
+    background: url(../resources/icon-validate.png) no-repeat center center;
+    background-size: cover;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  /* line 599, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  /* line 604, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    /* coche invisible */
+    transform: scale(0);
+    /* mise à l'échelle à 0 */
+  }
+  /* line 609, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-photo-left .game-selection [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    /* coche opaque */
+    transform: scale(1);
+    /* mise à l'échelle 1:1 */
+  }
+  /* line 615, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left {
+    left: 50% !important;
+    top: 50% !important;
+    width: 700px;
+    height: 350px;
+    margin-left: -350px;
+    margin-top: -100px;
+    opacity: 0;
+    color: #000000;
+  }
+  /* line 624, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble {
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    top: 0;
+    left: 150px;
+    padding: 20px;
+    background: #000000;
+    color: #ffffff;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-box-shadow: black 0 0 50px 0;
+    box-shadow: black 0 0 50px 0;
+  }
+  /* line 635, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: -25px;
+    background: #ff7900;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* line 650, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble .text {
+    font-size: 24px;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  /* line 655, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble a.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  /* line 661, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ff7900;
+    color: #ff7900;
+    outline: none;
+  }
+  /* line 666, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].typedInput {
+    width: 180px;
+    margin: 0 10px;
+    background: transparent;
+  }
+  /* line 671, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"]:focus {
+    -webkit-box-shadow: transparent 0 0 0 0;
+    box-shadow: transparent 0 0 0 0;
+  }
+  /* line 674, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-bubble input[type="text"].has-error {
+    border-bottom: 2px solid red;
+    color: red;
+  }
+  /* line 680, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    -webkit-box-shadow: black 0 0 50px 0;
+    box-shadow: black 0 0 50px 0;
+  }
+  /* line 688, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  /* line 695, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .rush {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+  /* line 700, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo .content-text .esport {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #ff7900;
+  }
+  /* line 708, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 50%;
+    left: 50%;
+    background: #ffffff;
+    -webkit-box-shadow: black 0 0 50px 0;
+    box-shadow: black 0 0 50px 0;
+  }
+  /* line 716, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  /* line 723, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .rush {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+  /* line 728, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-text-left .speech-text-left-logo-start .content-text .esport {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #ff7900;
+  }
+  /* line 737, ../dev/sass/_registration-steps-responsive.scss */
+  #modal-registration-steps .modal-dialog .modal-content .parallax-container-steps .speech-welcome {
+    width: 100%;
+    height: 100%;
+    background: red;
   }
 }

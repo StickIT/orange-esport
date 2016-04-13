@@ -443,6 +443,7 @@
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content flexbox-center">
+                    <a href="#" class="close-modal"><img src="resources/icon-cross.png" alt=""></a>
                     <form action="">
                         <!-- Step 00 -->
                         <ul class="list-unstyled parallax-container-steps parallax-step-00 hidden" data-origin-x="0.5" data-origin-y="0.5">
@@ -579,25 +580,25 @@
                             </li>
                             <li class="layer speech-photo-left" data-depth="0.25">
                                 <div class="speech-photo-left-card speech-photo-left-game">
-                                    <div class="col-md-3 game-selection game-selection-action">
+                                    <div class="col-sm-3 game-selection game-selection-action">
                                         <input type="checkbox" id="game-action">
                                         <label for="game-action">
                                             <div class="game-title">Action</div>
                                         </label>                                    
                                     </div>
-                                    <div class="col-md-3 game-selection game-selection-strategy">                                    
+                                    <div class="col-sm-3 game-selection game-selection-strategy">                                    
                                         <input type="checkbox" id="game-strategy">
                                         <label for="game-strategy">
                                             <div class="game-title">Stratégie</div>
                                         </label>  
                                     </div>
-                                    <div class="col-md-3 game-selection game-selection-sport">                                    
+                                    <div class="col-sm-3 game-selection game-selection-sport">                                    
                                         <input type="checkbox" id="game-sport">
                                         <label for="game-sport">
                                             <div class="game-title">Sport</div>
                                         </label>  
                                     </div>
-                                    <div class="col-md-3 game-selection game-selection-fight">
+                                    <div class="col-sm-3 game-selection game-selection-fight">
                                         <input type="checkbox" id="game-fight">
                                         <label for="game-fight">
                                             <div class="game-title">Combat</div>
@@ -632,9 +633,9 @@
                                     <div class="card-title">
                                         <h3>Informations personnelles :</h3>
                                         <hr>
-                                        <input type="text" class="form-control" placeholder="E-mail"><br>
-                                        <input type="password" class="form-control" placeholder="Mot de passe"><br>
-                                        <input type="password" class="form-control" placeholder="Confirmation du mot de passe">
+                                        <input type="text" class="form-control" name="reg-email" placeholder="E-mail"><br>
+                                        <input type="password" class="form-control" name="reg-password" placeholder="Mot de passe"><br>
+                                        <input type="password" class="form-control" name="reg-conf-password" placeholder="Confirmation du mot de passe">
                                     </div>
                                 </div>
                             </li>
@@ -688,7 +689,6 @@
             </div>
         </div>
     </section>
-    <!-- Modal -->
 
     <script data-main="js/main.min" src="js/lib/require.js">
     </script>
