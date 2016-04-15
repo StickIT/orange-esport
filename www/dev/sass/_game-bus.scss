@@ -1,24 +1,136 @@
-.game-bus{
+body, html{
 	height: 100%;
+}
+
+.page-home-game-bus{
 	@include display-flex;
-	@include justify-content(space-between);
-	@include flex-direction(column);
-	h2{
-		color: $brand-orange;
-		font-size: bold;
+	@include align-items(stretch);
+	@include flex-direction(row);
+	margin-bottom:40px;
+	.page-home-game-bus-content{
+		@include display-flex;
+		@include align-items(stretch);
+		@include flex-direction(row);
+		margin-right: $grid-gutter-width;
 	}
-	&.game-step-01{
-		
-	}
-	&.game-step-03{
-	}
-	.page-home-top-content{
+	.game-bus{
+		position: absolute;
+		width:100%;
+		height: 100%;
+		@include display-flex;
+		@include justify-content(space-between);
+		@include flex-direction(column);
 		@include flex(1);
-		ul{
-			height: 100%;
-			@include display-flex;
-			@include justify-content(space-between);
-			@include flex-direction(column);
+		// background:red;
+		padding:$grid-gutter-width;
+		text-align: center;
+		h2{
+			color: $brand-orange;
+			font-size: bold;
+			margin:0;
+		}
+		&.game-step-01{
+			background:url(../resources/bg-card-copy.png) no-repeat center center;
+			background-size:cover;
+		}
+		&.game-step-02{
+			background:url(../resources/bg-card.png) no-repeat center center;
+			background-size:cover;
+			.page-home-game-content{
+				.form-group{
+					width: 100%;
+				}
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				@include flex-direction(row);
+			}
+		}
+		&.game-step-03{
+			.page-home-game-title{
+				position: relative;
+				overflow: hidden;
+				background:$brand-white;
+				color:$brand-black;
+				padding: $grid-gutter-width/2 0;
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				@include flex-direction(row);
+				h2, h4{
+					margin:0;
+					padding:0;
+				}
+				i{
+					color:$brand-white;
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					left:-8%;
+					top:-80%;
+					width:40%;
+					height:200%;
+					background: $brand-orange;
+					@include rotate(15deg);
+				}
+			}
+			.page-home-game-content{
+				@include display-flex;
+				@include flex-direction(column);
+				padding: $grid-gutter-width 0;
+				.game-city-list{	
+					position: relative;
+					text-align: left;	
+					@include display-flex;
+					@include align-items(center);
+					@include justify-content(space-between);
+					@include flex-direction(row);
+					@include flex-grow(1);
+					font-size: 16 px;
+					font-weight: bold;
+					.progress{
+						height: 5px;
+						width:140px;
+						vertical-align: baseline;
+						margin: 0;
+						background: rgba($brand-white, .6);
+						border-radius: 5px;
+						.progress-bar{
+							background:$brand-orange;
+							@include box-shadow(rgba(#000, 0) 0 0 0 0);
+						}
+					}
+				}
+			}
+		}
+		&.game-step-04{			
+			.page-home-game-content{
+				@include display-flex;
+				@include align-items(center);
+				@include justify-content(center);
+				@include flex-direction(row);
+			}
+		}
+		.page-home-game-content{
+			@include flex(1);
+			ul{
+				text-align: left;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+				@include display-flex;
+				@include flex-direction(column);
+				li{
+					@include flex-grow(1);
+				}
+			}
+		}
+		.page-home-game-button{
+			.btn{
+				background:$brand-orange;
+				border:0;
+			}
 		}
 	}
 }

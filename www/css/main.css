@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Roman.otf?1337614500') format('opentype');
 }
 @font-face {
   font-family: "Orange";
-  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1456173997') format('opentype');
+  src: url('/fonts/../fonts/HelveticaNeueLTStd-Bd.otf?1337614508') format('opentype');
   font-weight: 700;
 }
 /*!
@@ -13962,7 +13962,34 @@ body {
   }
 }
 /* line 1, ../dev/sass/_game-bus.scss */
-.game-bus {
+body, html {
+  height: 100%;
+}
+
+/* line 5, ../dev/sass/_game-bus.scss */
+.page-home-game-bus {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+/* line 10, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .page-home-game-bus-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  margin-right: 20px;
+}
+/* line 16, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus {
+  position: absolute;
+  width: 100%;
   height: 100%;
   display: -webkit-flex;
   display: flex;
@@ -13970,26 +13997,157 @@ body {
   justify-content: space-between;
   -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
-/* line 6, ../dev/sass/_game-bus.scss */
-.game-bus h2 {
+/* line 27, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus h2 {
   color: #ff7900;
   font-size: bold;
+  margin: 0;
 }
-/* line 15, ../dev/sass/_game-bus.scss */
-.game-bus .page-home-top-content {
+/* line 32, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-01 {
+  background: url(../resources/bg-card-copy.png) no-repeat center center;
+  background-size: cover;
+}
+/* line 36, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-02 {
+  background: url(../resources/bg-card.png) no-repeat center center;
+  background-size: cover;
+}
+/* line 39, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-02 .page-home-game-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/* line 40, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-02 .page-home-game-content .form-group {
+  width: 100%;
+}
+/* line 50, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-title {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/* line 60, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-title h2, .page-home-game-bus .game-bus.game-step-03 .page-home-game-title h4 {
+  margin: 0;
+  padding: 0;
+}
+/* line 64, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-title i {
+  color: #ffffff;
+}
+/* line 67, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-title:before {
+  content: '';
+  position: absolute;
+  left: -8%;
+  top: -80%;
+  width: 40%;
+  height: 200%;
+  background: #ff7900;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+/* line 78, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 0;
+}
+/* line 82, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-content .game-city-list {
+  position: relative;
+  text-align: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-size: 16 px;
+  font-weight: bold;
+}
+/* line 92, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-content .game-city-list .progress {
+  height: 5px;
+  width: 140px;
+  vertical-align: baseline;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
+/* line 99, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-03 .page-home-game-content .game-city-list .progress .progress-bar {
+  background: #ff7900;
+  -webkit-box-shadow: transparent 0 0 0 0;
+  box-shadow: transparent 0 0 0 0;
+}
+/* line 108, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus.game-step-04 .page-home-game-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/* line 115, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus .page-home-game-content {
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 17, ../dev/sass/_game-bus.scss */
-.game-bus .page-home-top-content ul {
+/* line 117, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus .page-home-game-content ul {
+  text-align: left;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
   display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+/* line 124, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus .page-home-game-content ul li {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/* line 130, ../dev/sass/_game-bus.scss */
+.page-home-game-bus .game-bus .page-home-game-button .btn {
+  background: #ff7900;
+  border: 0;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {

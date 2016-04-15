@@ -44,10 +44,8 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
         });
         // Close modal
         jQuery('.close-modal').click(function(e){
-
             e.preventDefault();
             e.stopPropagation();  
-            console.log('closed');
             jQuery('.modal').modal('hide');
         })
         // Registration Sequences        
@@ -420,7 +418,7 @@ require(['jquery', 'bootstrap', 'velocity', 'velocity-ui', 'parallax', 'typed'],
             // Remove class
             jQuery('.parallax-step-08').removeClass('hidden');
             // Username card            
-            jQuery('.parallax-step-08 .card-username').html(pseudoUser);
+            jQuery('.parallax-step-08 .card-username').html('pseudoUser');
             // Animate speechbubble
             jQuery('.parallax-step-08 .speech-text-left, .parallax-step-08 .speech-photo-left').velocity({opacity: [1, 0]}, { duration: 100 });
             jQuery('.parallax-step-08 .speech-photo-left .speech-photo-left-card').velocity({opacity: [1, 0], translateY: ['0', '-150%']}, { duration: 500, easing: [ .24,0,.29,1.29 ] }); 
