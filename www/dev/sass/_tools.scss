@@ -1,26 +1,208 @@
-.page-container{	
-	margin-top: $grid-gutter-width;
+.page-container{
+
+	// margin-top: $grid-gutter-width;
+
 	.container-full{
+
 		position: relative;
 		width:100%;
 		height: 100%;
 		overflow:hidden;
 	}
 	.bottom-gutter{
+
 		margin-bottom: $grid-gutter-width;
 	}
 	.no-padding{
+
 		padding:0;
 	}
 	.btn{
-		border:3px solid;
-		padding-top:10px;
-		font-weight:bold;
-		&.btn-primary{
+		border:$btn-border-size solid;
+		// @include flex-direction(row);
+		// @include justify-content(flex);
+		// @include align-items(center);
+		font-weight: $btn-font-weight;
+		@include single-transition (all, 0.3s,ease);
+
+		&.btn-small{
+			height: $btn-size-small;
+			line-height: $font-size-small-labels;
+			font-size: $font-size-small-labels;
+			padding-left: $btn-padding-size-small;
+			padding-right: $btn-padding-size-small;
+		}
+
+		&.btn-medium{
+			height: $btn-size-medium;
+			line-height: ($font-size-labels)+12px;
+			font-size: $font-size-labels;
+			padding-left: $btn-padding-size-medium;
+			padding-right: $btn-padding-size-medium;
+		}
+
+		&.btn-large{
+			height: $btn-size-large;
+			line-height: ($font-size-labels)+18px;
+			font-size: $font-size-labels;
+			padding-left: $btn-padding-size-large;
+			padding-right: $btn-padding-size-large;
+		}
+
+		&.btn-outline-white{
 			color:$brand-white;
+			border-color: $brand-white;
+			background-color: transparent;
+
+			&:hover{
+				color:$brand-black !important;
+				border-color:$brand-white !important;
+				background-color: $brand-white !important;
+			}
+
+			&:focus{
+				color:$brand-white !important;
+				border-color:$brand-orange !important;
+				background-color: $brand-orange !important;
+				box-shadow: none !important;
+			}
+		}
+
+		&.btn-fill-white{
+			color:$brand-black;
+			background-color: $brand-white;
+			border-color: $brand-white;
+
+			&:hover{
+				color:$brand-white !important;
+				border-color:$brand-white !important;
+				background-color: transparent !important;
+			}
+
+			&:focus{
+				color:$brand-white !important;
+				border-color:$brand-orange !important;
+				background-color: $brand-orange !important;
+				box-shadow: none !important;
+			}
+		}
+
+		&.btn-outline-black{
+			color:$brand-black;
+			border-color: $brand-black;
+			background-color: transparent;
+
+			&:hover{
+				color:$brand-white !important;
+				border-color:$brand-black !important;
+				background-color: $brand-black !important;
+			}
+
+			&:focus{
+				color:$brand-white !important;
+				border-color:$brand-orange !important;
+				background-color: $brand-orange !important;
+				box-shadow: none !important;
+			}
+		}
+
+		&.btn-fill-black{
+			color:$brand-white;
+			border-color: $brand-black;
+			background-color: $brand-black;
+
+			&:hover{
+				color:$brand-black !important;
+				border-color:$brand-black !important;
+				background-color: transparent !important;
+			}
+
+			&:focus{
+				color:$brand-white !important;
+				border-color:$brand-orange !important;
+				background-color: $brand-orange !important;
+				box-shadow: none !important;
+			}
+		}
+
+		&.btn-fill-orange{
+			color:$brand-white;
+			border-color: $brand-orange;
+			background-color: $brand-orange;
+
 			&:hover{
 				color:$brand-orange !important;
-				border-color:$brand-orange;
+				border-color:$brand-orange !important;
+				background-color: transparent !important;
+			}
+
+			&:focus{
+				color:$brand-white !important;
+				border-color:$brand-orange !important;
+				background-color: $brand-orange !important;
+				box-shadow: none !important;
+			}
+		}
+	}
+}
+/* Padding */
+.padding {
+	&-large {
+		padding: $padding-large-vertical $padding-large-horizontal;
+
+		&-vertical {
+			padding: $padding-large-vertical 0;
+
+			&-2x {
+				padding: $padding-large-vertical*2 0;
+			}
+		}
+
+		&-horizontal {
+			padding: 0 $padding-large-horizontal;
+
+			&-2x {
+				padding: 0 $padding-large-horizontal*2;
+			}
+		}
+
+	}
+
+	&-base {
+		padding: $padding-base-vertical $padding-base-horizontal;
+
+		&-vertical {
+			padding: $padding-base-vertical 0;
+
+			&-2x {
+				padding: $padding-base-vertical*2 0;
+			}
+		}
+
+		&-horizontal {
+			padding: 0 $padding-base-horizontal;
+
+			&-2x {
+				padding: 0 $padding-base-horizontal*2;
+			}
+		}
+	}
+
+	&-small {
+		padding: $padding-small-vertical $padding-small-horizontal;
+
+		&-vertical {
+			padding: $padding-small-vertical 0;
+
+			&-2x {
+				padding: $padding-small-vertical*2 0;
+			}
+		}
+		&-horizontal {
+			padding: 0 $padding-small-horizontal;
+
+			&-2x {
+				padding: 0 $padding-small-horizontal*2;
 			}
 		}
 	}

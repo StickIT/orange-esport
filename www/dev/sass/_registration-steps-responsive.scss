@@ -1,0 +1,751 @@
+// Smartphone portrait
+@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) and (orientation : portrait){
+	$photo-width: 80%;
+	$photo-height: 250px;
+	$speech-width: 80%;
+	$speech-height: 250px;
+	$text-width: 100%;
+	$text-height: 200px;
+	$logo-width: 50px;
+	$logo-height: $logo-width;
+
+	#modal-registration-steps{
+		width: 100%;
+		height: 100%;
+		.modal-dialog{
+			width: 100%;
+			height: 100%;
+			margin:0;
+			.modal-content{
+				background: transparent;
+				@include box-shadow(rgba(#000, 0) 0 0 0 0);
+				width: 100%;
+				height: 100%;
+				overflow:hidden;
+				form{				
+					width: 100%;
+					height: 100%;
+				}
+				.parallax-container-steps{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					margin:0;
+					padding: 0;
+					@include display-flex;
+					@include align-items(center);
+					@include justify-content(center);
+					.speech-photo-left{
+						.speech-photo-left-card{
+							width: 100%;
+							height: 100%;
+							background:url(../resources/bg-card.png);
+							background-size:cover;
+							background-repeat: no-repeat;
+							@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(space-between);
+							@include flex-direction(row);
+							.card-member{
+								position: relative;
+								width:20%;
+								text-align: center;
+								margin-left:5%;
+								img{
+									width: 100%;
+								}
+								.card-username{
+									position: absolute;
+									width: 100%;
+									height: 50px;
+									left: 50%;
+									top: 50%;
+									margin-left: -53%;
+									margin-top: -10px;
+									text-align: center;
+									font-size: 20px;
+								}
+								.icon-validate{
+									width: 30px;
+									height: 30px;
+								}
+							}
+							.card-title{
+								@include flex(1);
+								@include text-shadow(rgba($brand-black, .8) 0 0 3px);
+								text-align:center;
+								margin:0 10%;
+								h3{
+									font-size: 30px;
+								}
+								h2{
+									font-size: 40px;
+								}
+								h6{
+									font-size: 16px;
+									font-weight: normal;
+									color: $brand-orange;
+									text-transform: uppercase;
+								}
+								hr{
+									width:100px;
+									border-color:$brand-orange;
+								}
+							}
+						}
+						left: 50% !important;
+						top: 50% !important;
+						width: $photo-width;
+						height: $photo-height;
+						margin-left: -($photo-width/2);
+						margin-top: -($photo-height/1);
+						opacity:0;
+						.image-landscape{
+							opacity:0;
+							@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						}
+						.game-selection{
+							position: relative;
+							padding:0;
+							height: 100%;
+							text-align:center;
+							background:green;
+							.game-title{
+								width:30%;
+								margin:0;
+								text-align:center;
+								background:rgba($brand-black, .9);
+								line-height:20px;
+								padding-top:2px;
+								font-size: 12px;
+							}
+							&.game-selection-action{
+								background:red;
+							}
+							&.game-selection-action{
+								background:transparent;
+								background-image:url(../resources/game/game-action.jpg);
+								background-position: left top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-strategy{
+								background:transparent;
+								background-image:url(../resources/game/game-strategy.jpg);
+								background-position: left top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-sport{
+								background:transparent;
+								background-image:url(../resources/game/game-sport.jpg);
+								background-position: left top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-fight{
+								background:transparent;
+								background-image:url(../resources/game/game-combat.jpg);
+								background-position: left top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+						/* Cachons la case à cocher */
+						[type="checkbox"]:not(:checked),
+						[type="checkbox"]:checked {
+							position: absolute;
+							left: -9999px;
+						}						 
+						/* on prépare le label */
+						[type="checkbox"]:not(:checked) + label,
+						[type="checkbox"]:checked + label {
+							position: relative; /* permet de positionner les pseudo-éléments */
+							cursor: pointer;    /* affiche un curseur adapté */
+							width: 100%;
+							height: 25%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(space-between);
+							@include flex-direction(row);
+						}
+						[type="checkbox"]:not(:checked) + label{
+							background:transparent;
+							&:hover{
+								background:rgba($brand-orange, .5);
+							}
+							@include transition(background .3s ease);
+						}
+						[type="checkbox"]:checked + label {
+							background:rgba($brand-orange, .9);
+							@include transition(background .3s ease);
+						}
+						/* Aspect des checkboxes */
+						/* :before sert à créer la case à cocher */
+						[type="checkbox"]:not(:checked) + label:before,
+						[type="checkbox"]:checked + label:before {
+							content: '';
+							position: absolute;
+							left:50%; top: 50%;
+							margin-left: -50px; margin-top: -50px;
+							width: 20px; height: 20px; /* dim. de la case */
+						}
+
+						/* Aspect général de la coche */
+						[type="checkbox"]:not(:checked) + label:after,
+						[type="checkbox"]:checked + label:after {
+							content: '';
+							position: absolute;
+							left:90%; top: 50%;
+							margin-left: -10px; margin-top: -10px;
+							width: 20px; height: 20px; /* dim. de la case */
+							color: $brand-white;
+							background:url(../resources/icon-validate.png) no-repeat center center;
+							background-size: cover;
+							@include transition(opacity .3s ease);
+						}
+						[type="checkbox"]:not(:checked) + label:after{
+							opacity:0;
+							@include transition(opacity .3s ease);
+						}
+						/* Aspect si "pas cochée" */
+						[type="checkbox"]:not(:checked) + label:after {
+						  opacity: 0; /* coche invisible */
+						  transform: scale(0); /* mise à l'échelle à 0 */
+						}
+						/* Aspect si "cochée" */
+						[type="checkbox"]:checked + label:after {
+						  opacity: 1; /* coche opaque */
+						  transform: scale(1); /* mise à l'échelle 1:1 */
+						}
+					}
+					.speech-photo-left-game{
+						width: 100%;
+						height: 100%;
+						background:url(../resources/bg-card.png);
+						background-size:cover;
+						background-repeat: no-repeat;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						@include display-flex;
+						@include align-items(stretch);
+						@include justify-content(space-between);
+						@include flex-direction(column);
+					}
+				}					
+				.speech-text-left{
+					left: 50% !important;
+					bottom: 50% !important;
+					width: $speech-width;
+					height: $speech-height;
+					margin-left: -($speech-width/2);
+					margin-top: -($speech-height/50);
+					opacity:0;
+					color: $brand-black;
+					.speech-text-left-bubble{
+						position: absolute;
+						width: $text-width;
+						height: $text-height;
+						top:0;
+						left:$logo-width;
+						padding: $grid-gutter-width;
+						background:$brand-black;
+						color: $brand-white;
+						opacity:0;
+						overflow:hidden;
+						&:before{
+							content: "";
+							position: absolute;
+							width:20px;
+							height: 20px;
+							bottom:-10px;
+							left:-10px;
+							background: $brand-orange;
+							@include rotate(45deg);
+						}
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						// @include display-flex;
+						// @include align-items(flex-start);
+						// @include justify-content(flex-start);
+						// @include flex-direction(column);
+						.text{
+							font-size: 16px;
+							@include flex(1);
+						}
+						a{
+							&.btn{
+								position: absolute;
+								bottom:$grid-gutter-width;
+								right:$grid-gutter-width;
+								width:auto !important;
+								font-size: 10px
+							}
+						}
+						input[type="text"]{
+							border:none;
+							border-bottom: 2px solid $brand-orange;
+							color: $brand-orange;
+							outline:none;
+							&.typedInput{
+								width: 100%;
+								margin:0;
+								background:transparent;
+							}
+							&:focus{
+								@include box-shadow(rgba(#000, 0) 0 0 0 0);
+							}
+							&.has-error{								
+								border-bottom: 2px solid red;
+								color: red;
+							}
+						}
+					}
+					.speech-text-left-logo{
+						position:absolute;
+						width: $logo-width;
+						height: $logo-height;
+						bottom:0;
+						left:0;
+						background:$brand-white;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						.content-text{
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(center);
+							@include flex-direction(column);
+							.rush{
+								font-size: 10px;
+								line-height: 12px;
+								font-weight: bold;
+							}
+							.esport{
+								font-size: 12px;
+								font-weight: bold;
+								line-height: 12px;
+								color: $brand-orange;
+							}
+						}
+					}
+					.speech-text-left-logo-start{
+						position:absolute;
+						width: $logo-width;
+						height: $logo-height;
+						bottom:50%;
+						left:50%;
+						background:$brand-white;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						.content-text{
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(center);
+							@include flex-direction(column);
+							.rush{
+								font-size: 10px;
+								line-height: 12px;
+								font-weight: bold;
+							}
+							.esport{
+								font-size: 12px;
+								font-weight: bold;
+								line-height: 12px;
+								color: $brand-orange;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+}
+
+// Smartphone landscape
+@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) and (orientation : landscape){
+
+}
+
+// Tablet landscape
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation : landscape) {
+
+}
+
+// Tablet portrait
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation : portrait) {
+	$photo-width: 1000px/1.5;
+	$photo-height: 400px/1.5;
+	$speech-width: 700px;
+	$speech-height: 350px;
+	$text-width: 550px;
+	$text-height: 200px;
+	$logo-width: 150px;
+	$logo-height: $logo-width;
+
+	#modal-registration-steps{
+		width: 100%;
+		height: 100%;
+		.modal-dialog{
+			width: 100%;
+			height: 100%;
+			margin:0;
+			.modal-content{
+				background: transparent;
+				@include box-shadow(rgba(#000, 0) 0 0 0 0);
+				width: 100%;
+				height: 100%;
+				overflow:hidden;
+				form{				
+					width: 100%;
+					height: 100%;
+				}
+				.parallax-container-steps{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					margin:0;
+					padding: 0;
+					@include display-flex;
+					@include align-items(center);
+					@include justify-content(center);
+					.speech-photo-left{
+						.speech-image{
+							opacity:0;
+						}
+						.speech-photo-left-card{
+							width: 100%;
+							height: 100%;
+							background:url(../resources/bg-card.png);
+							background-size:cover;
+							background-repeat: no-repeat;
+							@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(space-between);
+							@include flex-direction(row);
+							input[type="text"], input[type="password"],{
+								background:transparent;
+								border:none;
+								border-bottom:1px solid rgba($brand-white, .5);
+								color:$brand-white;
+								text-align: center;
+								outline:none;
+								padding:0;
+								@include box-shadow(rgba(#000,0) 0 0 0 0);
+							}
+							.card-member{
+								position: relative;
+								width:30%;
+								text-align: center;
+								margin-left:5%;
+								img{
+									width: 100%;
+								}
+								.card-username{
+									position: absolute;
+									width: 100%;
+									height: 50px;
+									left: 50%;
+									top: 50%;
+									margin-left: -53%;
+									margin-top: -10px;
+									text-align: center;
+									font-size: 20px;
+								}
+								.icon-validate{
+									width: 150px;
+									height: 150px;
+								}
+							}
+							.card-title{
+								@include flex(1);
+								@include text-shadow(rgba($brand-black, .8) 0 0 3px);
+								text-align:center;
+								margin:0 10%;
+								margin-bottom:0%;
+								h3{
+									font-size: 24px;
+								}
+								h2{
+									font-size: 26px;
+								}
+								h6{
+									font-size: 16px;
+									font-weight: normal;
+									color: $brand-orange;
+									text-transform: uppercase;
+								}
+								hr{
+									width:100px;
+									border-color:$brand-orange;
+								}
+							}
+						}
+						left: 50% !important;
+						top: 50% !important;
+						width: $photo-width;
+						height: $photo-height;
+						margin-left: -($photo-width/2);
+						margin-top: -($photo-height/.75);
+						opacity:0;
+						.image-landscape{
+							opacity:0;
+							@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						}
+						.game-selection{
+							position: relative;
+							padding:0;
+							height: 100%;
+							text-align:center;
+							background:green;
+							.game-title{
+								width:80%;
+								margin-top: 20px;
+								text-align:center;
+								background:rgba($brand-black, .9);
+								line-height:40px;
+								padding-top:2px;
+							}
+							&.game-selection-action{
+								background:red;
+							}
+							&.game-selection-action{
+								background:transparent;
+								background-image:url(../resources/game/game-action.jpg);
+								background-position: -200px top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-strategy{
+								background:transparent;
+								background-image:url(../resources/game/game-strategy.jpg);
+								background-position: -130px top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-sport{
+								background:transparent;
+								background-image:url(../resources/game/game-sport.jpg);
+								background-position: -180px top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+							&.game-selection-fight{
+								background:transparent;
+								background-image:url(../resources/game/game-combat.jpg);
+								background-position: -180px top;
+								background-repeat: no-repeat;
+								background-size: cover;
+							}
+						/* Cachons la case à cocher */
+						[type="checkbox"]:not(:checked),
+						[type="checkbox"]:checked {
+							position: absolute;
+							left: -9999px;
+						}						 
+						/* on prépare le label */
+						[type="checkbox"]:not(:checked) + label,
+						[type="checkbox"]:checked + label {
+							position: relative; /* permet de positionner les pseudo-éléments */
+							cursor: pointer;    /* affiche un curseur adapté */
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(flex-start);
+							@include flex-direction(column);
+						}
+						[type="checkbox"]:not(:checked) + label{
+							background:transparent;
+							&:hover{
+								background:rgba($brand-orange, .5);
+							}
+							@include transition(background .3s ease);
+						}
+						[type="checkbox"]:checked + label {
+							background:rgba($brand-orange, .9);
+							@include transition(background .3s ease);
+						}
+						/* Aspect des checkboxes */
+						/* :before sert à créer la case à cocher */
+						[type="checkbox"]:not(:checked) + label:before,
+						[type="checkbox"]:checked + label:before {
+							content: '';
+							position: absolute;
+							left:50%; top: 50%;
+							margin-left: -50px; margin-top: -50px;
+							width: 100px; height: 100px; /* dim. de la case */
+						}
+
+						/* Aspect général de la coche */
+						[type="checkbox"]:not(:checked) + label:after,
+						[type="checkbox"]:checked + label:after {
+							content: '';
+							position: absolute;
+							left:50%; top: 50%;
+							margin-left: -40.5px; margin-top: -40.5px;
+							width: 81px; height: 81px; /* dim. de la case */
+							color: $brand-white;
+							background:url(../resources/icon-validate.png) no-repeat center center;
+							background-size: cover;
+							@include transition(opacity .3s ease);
+						}
+						[type="checkbox"]:not(:checked) + label:after{
+							opacity:0;
+							@include transition(opacity .3s ease);
+						}
+						/* Aspect si "pas cochée" */
+						[type="checkbox"]:not(:checked) + label:after {
+						  opacity: 0; /* coche invisible */
+						  transform: scale(0); /* mise à l'échelle à 0 */
+						}
+						/* Aspect si "cochée" */
+						[type="checkbox"]:checked + label:after {
+						  opacity: 1; /* coche opaque */
+						  transform: scale(1); /* mise à l'échelle 1:1 */
+						}
+					}
+				}
+				.speech-text-left{
+					left: 50% !important;
+					top: 50% !important;
+					width: $speech-width;
+					height: $speech-height;
+					margin-left: -($speech-width/2);
+					margin-top: -($speech-height/3.5);
+					opacity:0;
+					color: $brand-black;
+					.speech-text-left-bubble{
+						position: absolute;
+						width: $text-width;
+						height: $text-height;
+						top:0;
+						left:$logo-width;
+						padding: $grid-gutter-width;
+						background:$brand-black;
+						color: $brand-white;
+						opacity:0;
+						overflow:hidden;
+						&:before{
+							content: "";
+							position: absolute;
+							width:50px;
+							height: 50px;
+							bottom:-25px;
+							left:-25px;
+							background: $brand-orange;
+							@include rotate(45deg);
+						}
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						// @include display-flex;
+						// @include align-items(flex-start);
+						// @include justify-content(flex-start);
+						// @include flex-direction(column);
+						.text{
+							font-size: 24px;
+							@include flex(1);
+						}
+						a{
+							&.btn{
+								position: absolute;
+								bottom:$grid-gutter-width;
+								right:$grid-gutter-width;
+							}
+						}
+						input[type="text"]{
+							border:none;
+							border-bottom: 2px solid $brand-orange;
+							color: $brand-orange;
+							outline:none;
+							&.typedInput{
+								width: 180px;
+								margin:0 10px;
+								background:transparent;
+							}
+							&:focus{
+								@include box-shadow(rgba(#000, 0) 0 0 0 0);
+							}
+							&.has-error{								
+								border-bottom: 2px solid red;
+								color: red;
+							}
+						}
+					}
+					.speech-text-left-logo{
+						position:absolute;
+						width: $logo-width;
+						height: $logo-height;
+						bottom:0;
+						left:0;
+						background:$brand-white;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						.content-text{
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(center);
+							@include flex-direction(column);
+							.rush{
+								font-size: 22px;
+								line-height: 26px;
+								font-weight: bold;
+							}
+							.esport{
+								font-size: 30px;
+								font-weight: bold;
+								line-height: 26px;
+								color: $brand-orange;
+							}
+						}
+					}
+					.speech-text-left-logo-start{
+						position:absolute;
+						width: $logo-width;
+						height: $logo-height;
+						bottom:50%;
+						left:50%;
+						background:$brand-white;
+						@include box-shadow(rgba(#000, 1) 0 0 50px 0);
+						.content-text{
+							width: 100%;
+							height: 100%;
+							@include display-flex;
+							@include align-items(center);
+							@include justify-content(center);
+							@include flex-direction(column);
+							.rush{
+								font-size: 22px;
+								line-height: 26px;
+								font-weight: bold;
+							}
+							.esport{
+								font-size: 30px;
+								font-weight: bold;
+								line-height: 26px;
+								color: $brand-orange;
+							}
+						}
+					}
+				}
+				.speech-welcome{
+					width: 100%;
+					height: 100%;
+					background:red;
+				}
+			}			
+		}
+	}
+}
+}
+
+// Normal Desktop
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+
+}

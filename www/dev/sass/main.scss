@@ -12,5 +12,10 @@
 @import 'header';
 @import 'home';
 @import 'footer';
+@import 'article';
+@import 'registration-steps';
+@import 'game-bus';
 // Responsives
-@import '_home-responsive'
+@import 'home-responsive';
+@import 'article-responsive';
+@import 'registration-steps-responsive';
